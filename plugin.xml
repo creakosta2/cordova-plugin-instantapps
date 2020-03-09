@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-instantapps" version="0.5.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>Instant Apps</name>
+	
+	<js-module name="InstantApps" src="www/InstantApps.js">
+		<clobbers target="plugins.InstantApps" />
+	</js-module>
+	
+	<js-module name="Utils" src="www/Utils.js">
+		<clobbers target="Utils" />
+	</js-module>
+	
+	<platform name="android">
+		<framework src="com.google.android.gms:play-services-instantapps:17.0.0" />
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="InstantAppsPlugin">
+				<param name="android-package" value="com-cordova-plugin-instantapps.InstantAppsPlugin" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml">
+		</config-file>
+		<source-file src="src/android/InstantAppsPlugin.java" target-dir="src/com-cordova-plugin-instantapps/InstantAppsPlugin" />
+	</platform>
+</plugin>
