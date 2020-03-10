@@ -19,6 +19,6 @@
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml">
 		</config-file>
-		<source-file src="src/android/InstantAppsPlugin.java" target-dir="src/com-cordova-plugin-instantapps/InstantAppsPlugin.java" />
+		<source-file src="src/android/InstantAppsPlugin.java" target-dir="res/src/com-cordova-plugin-instantapps/InstantAppsPlugin.java" />
 	</platform>
 </plugin>
