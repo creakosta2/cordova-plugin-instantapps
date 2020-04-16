@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-instantapps",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A plugin for Cordova Android which provides Instant Apps support",
   "cordova": {
     "id": "cordova-plugin-instantapps",
@@ -9,8 +9,17 @@
     ]
   },
   "keywords": [
+    "InstantApps",
+    "Immediate",
+    "Update",
     "ecosystem:cordova",
     "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=7.1.0"
+    }
   ],
   "author": "bumpercarz",
   "license": "MIT"
