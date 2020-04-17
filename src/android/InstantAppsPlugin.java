@@ -9,6 +9,7 @@ import org.apache.cordova.PluginResult.Status;
 
 import android.content.Intent;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.util.Log;
 import android.app.Activity;
 
@@ -47,10 +48,10 @@ public class InstantAppsPlugin extends CordovaPlugin {
         
 		if(action.equals("showInstallPrompt")) {
 			// TODO
-			//PackageManager packageManager = context.getPackageManager();
-			//Intent postInstallIntent = packageManager.getLaunchIntentForPackage(context.getPackageName());
+			PackageManager packageManager = cordova.getContext().getPackageManager();
+			Intent postInstallIntent = packageManager.getLaunchIntentForPackage(cordova.getContext().getPackageName());
 			//Intent postInstallIntent = new Intent(cordova.getActivity().getApplicationContext(), Intent.ACTION_MAIN); //args.getString(0);
-			Intent postInstallIntent = new Intent("android.intent.action.MAIN");
+			//Intent postInstallIntent = new Intent("android.intent.action.MAIN");
 			int requestCode = 7; //args.getInt(1);
 			String referrer = "InstantApps"; //args.getString(2);
 			return this.showInstallPrompt(postInstallIntent, requestCode, referrer, callbackContext);
