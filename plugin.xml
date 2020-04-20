@@ -26,16 +26,5 @@
 		<config-file parent="/*" target="AndroidManifest.xml">
 		</config-file>
 		<source-file src="src/android/InstantAppsPlugin.java" target-dir="src/com/cordova/plugin/inappupdates" />
-		
-		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity" mode="merge">
-                <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                </intent-filter>
-        </config-file>
-        <config-file target="AndroidManifest.xml" parent="/*" mode="merge" xmlns:dist="http://schemas.android.com/apk/distribution">
-        <dist:module dist:instant="true" />
-        </config-file>
 	</platform>
 </plugin>
