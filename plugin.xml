@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-instantapps" version="0.6.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution">
+<plugin id="cordova-plugin-instantapps" version="0.6.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>Instant Apps</name>
 	<description>A plugin for Cordova Android which provides Instant Apps support</description>
 	<author>bumpercarz</author>
@@ -34,8 +34,8 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 </intent-filter>
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="/*" mode="merge">
-        <dist:module dist:instant="true"/>
+        <config-file target="AndroidManifest.xml" parent="/*" mode="merge" xmlns:dist="http://schemas.android.com/apk/distribution">
+        <dist:module dist:instant="true" />
         </config-file>
 	</platform>
 </plugin>
