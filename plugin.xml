@@ -16,7 +16,7 @@
 	</js-module>
 	
 	<platform name="android">
-		<framework src="com.google.android.gms:play-services-instantapps:16.+" />
+		<framework src="com.google.android.gms:play-services-instantapps:17" />
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="InstantAppsPlugin">
 				<param name="android-package" value="com.cordova.plugin.instantapps.InstantAppsPlugin" />
@@ -26,5 +26,13 @@
 		<config-file parent="/*" target="AndroidManifest.xml">
 		</config-file>
 		<source-file src="src/android/InstantAppsPlugin.java" target-dir="src/com/cordova/plugin/inappupdates" />
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity" mode="merge">
+                <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                </intent-filter>
+        </config-file>
 	</platform>
 </plugin>
