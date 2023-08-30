@@ -16,7 +16,8 @@
 	</js-module>
 	
 	<platform name="android">
-		<framework src="com.google.android.gms:play-services-instantapps:17.0.0" />
+                <framework src="android/instant.gradle" custom="true" type="gradleReference" />
+		
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="InstantAppsPlugin">
 				<param name="android-package" value="com.cordova.plugin.instantapps.InstantAppsPlugin" />
