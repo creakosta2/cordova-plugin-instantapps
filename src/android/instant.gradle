@@ -1,0 +1,17 @@
+cdvPluginPostBuildExtras.add({
+    android {
+      compileOptions {
+          sourceCompatibility JavaVersion.VERSION_1_8
+          targetCompatibility JavaVersion.VERSION_1_8
+      }
+    }
+    repositories {
+    google()
+    mavenCentral()
+  }
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation 'com.google.android.gms:play-services-instantapps:17.0.0'
+    }
+});
