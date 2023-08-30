@@ -16,7 +16,7 @@
 	</js-module>
 	
 	<platform name="android">
-                <framework src="android/instant.gradle" custom="true" type="gradleReference" />
+                <framework src="src/android/instant.gradle" custom="true" type="gradleReference" />
 		
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="InstantAppsPlugin">
